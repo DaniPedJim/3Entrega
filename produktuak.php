@@ -21,66 +21,21 @@
     <section id="produktuak">
         <div class="grid">
 
-            <div class="produktu">
-                <img src="irudiak/2.jpg" alt="Ordenagailu eramangarria">
-                <h3>Ordenagailu eramangarria 15.6"</h3>
-                <p>Intel Core i5 • 16GB RAM • 512GB SSD • Windows 11</p>
-                <p class="prezioa">Prezioa: 699€</p>
-                <button class="erosi">Erosi</button>
-            </div>
-            <div class="produktu">
-                <img src="irudiak/10.jpg" alt="Ordenagailu eramangarria">
-                <h3>Ordenagailu eramangarria 15.6"</h3>
-                <p>Intel Core i5 • 16GB RAM • 512GB SSD • Windows 11</p>
-                <p class="prezioa">Prezioa: 699€</p>
-                <button class="erosi">Erosi</button>
-            </div>
-            <div class="produktu">
-                <img src="irudiak/6.jpg" alt="Ordenagailu eramangarria">
-                <h3>Ordenagailu eramangarria 15.6"</h3>
-                <p>Intel Core i5 • 16GB RAM • 512GB SSD • Windows 11</p>
-                <p class="prezioa">Prezioa: 699€</p>
-                <button class="erosi">Erosi</button>
-            </div>
-            <div class="produktu">
-                <img src="irudiak/7.jpg" alt="Ordenagailu eramangarria">
-                <h3>Ordenagailu eramangarria 15.6"</h3>
-                <p>Intel Core i5 • 16GB RAM • 512GB SSD • Windows 11</p>
-                <p class="prezioa">Prezioa: 699€</p>
-                <button class="erosi">Erosi</button>
-            </div>
-            <div class="produktu">
-                <img src="irudiak/8.jpg" alt="Ordenagailu eramangarria">
-                <h3>Ordenagailu eramangarria 15.6"</h3>
-                <p>Intel Core i5 • 16GB RAM • 512GB SSD • Windows 11</p>
-                <p class="prezioa">Prezioa: 699€</p>
-                <button class="erosi">Erosi</button>
-            </div>
-
-            <div class="produktu">
-                <img src="irudiak/9.jpg" alt="Ordenagailu eramangarria">
-                <h3>UltraBook 14"</h3>
-                <p>Intel Core i7 • 8GB RAM • 256GB SSD • Windows 11 Pro</p>
-                <p class="prezioa">Prezioa: 849€</p>
-                <button class="erosi">Erosi</button>
-            </div>
-
-            <div class="produktu">
-                <img src="irudiak/4.jpg" alt="Gaming eramangarria">
-                <h3>Gaming Laptop 16"</h3>
-                <p>Intel Celeron N150 • 16GB RAM • 1TB SSD • WiFi 6</p>
-                <p class="prezioa">Prezioa: 599€</p>
-                <button class="erosi">Erosi</button>
-            </div>
-
-            <div class="produktu">
-                <img src="irudiak/7.jpg" alt="Teklatu mekanikoa">
-                <h3>Teklatu Mekanikoa RGB</h3>
-                <p>Argiztapen koloretsua • USB konexioa • Tamaina trinkoa</p>
-                <p class="prezioa">Prezioa: 69€</p>
-                <button class="erosi">Erosi</button>
-            </div>
-
+            <?php
+                require_once "db_konexioa.php";
+                $sql= "Select izena,prezioa,deskribapena,argazkia from erronka2.produktuak";
+                $stmt= $pdo->query($sql);
+                while($row = $stmt-> fetch(PDO::FETCH_ASSOC)){
+                    echo "<div class='produktu'>";
+                    echo "<img src='irudiak/".$row["argazkia"]."'>";
+                    echo "<h3>".$row["izena"]."</h3>";
+                    echo "<p>".$row["deskribapena"]."</p>";
+                    echo "<p class='prezioa'>Prezioa: ".$row["prezioa"]."€</p>";
+                    echo "<button class='erosi'>Erosi</button>";
+                    echo"</div>";
+            
+                } 
+            ?>
         </div>
     </section>
 
