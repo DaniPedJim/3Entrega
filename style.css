@@ -345,7 +345,9 @@ section {
 .erosi:hover {
     background-color: #2e8b57;
 }
-
+form{
+    display: inline-block;
+}
 
 /* -------------------------
    NOR GARA (norgara.html)
