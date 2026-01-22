@@ -9,17 +9,7 @@
 </head>
 
 <body>
-
-    <header>
-        <nav>
-            <a class="berritech-btn">
-                <img src="irudiak/LogoErronka1.png" alt="Berritech">
-            </a>
-            <a href="index.html">SARRERA</a>
-            <a href="produktuak.html">PRODUKTUAK</a>
-            <a href="norgara.html">NOR GARA</a>
-            <a href="formularioa.html">FORMULARIOA</a>
-            <a href="login.html">LOGIN</a>
+    <?php require "header.php" ?>
             <div class="hizkuntza">
                 <a href="produktuak.html"> EU</a> |
                 <a href="ProduktuakEN.html">EN</a>

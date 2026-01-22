@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eu">
 
 <head>
     <meta charset="UTF-8">
@@ -10,16 +10,7 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a class="berritech-btn">
-                <img src="irudiak/LogoErronka1.png" alt="Berritech">
-            </a>
-            <a href="indexEN.html">HOME</a>
-            <a href="ProduktuakEN.html">PRODUCTS</a>
-            <a href="norgaraEN.html">ABOUT US</a>
-            <a href="formularioaEN.html">FORM</a>
-            <a href="loginEN.html">LOGIN</a>
+    <?php require "header.php" ?>
             <div class="hizkuntza">
                 <a href="login.html"> EU</a> |
                 <a href="loginEN.html">EN</a>
@@ -31,18 +22,18 @@
         <h1>LOGIN</h1>
 
         <div class="login-box">
-            <form method="post">
-                <label for="erabiltzailea"><i class="fa fa-user"></i> Username (Email):</label>
-                <input type="email" id="erabiltzailea" name="erabiltzailea" placeholder="Your email" required>
+            <form action="index.php" method="post">
+                <label for="erabiltzailea"><i class="fa fa-user"></i> Erabiltzailea:</label>
+                <input type="email" id="erabiltzailea" name="erabiltzailea" placeholder="Zure email" required>
 
-                <label for="pasahitza"><i class="fa fa-key"></i> Password:</label>
-                <input type="password" id="pasahitza" name="pasahitza" placeholder="Type here" required>
+                <label for="pasahitza"><i class="fa fa-key"></i> Pasahitza:</label>
+                <input type="password" id="pasahitza" name="pasahitza" placeholder="Idatzi hemen" required>
 
-                <button type="submit">Log In</button>
+                <button type="submit">Sartu</button>
             </form>
 
             <div class="no-account">
-                <a href="createUserEN.html">Dont have an account?<br><strong>Create one here</strong></a>
+                <a href="createUser.html">Ez duzu konturik?<br><strong>Sartu hemen</strong></a>
             </div>
         </div>
     </section>
